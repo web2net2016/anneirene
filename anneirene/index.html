@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -23,7 +23,7 @@
 <link type="text/css" rel="stylesheet" id="size-stylesheet" href="lib/css/lg.css">
 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <script type="text/javascript">
-
+    //X
 var StyleMode = true;
        
 $(document).ready(function()
@@ -33,7 +33,30 @@ $(document).ready(function()
     {
         adjustStyle();
     });
+
+
+
+        $("#pwd").animate(
+        {
+            width: "500px",
+            height: "100px"
+        });
+
+
 });
+
+
+function KnappenErTrykket()
+{
+
+    $("#pwd").animate(
+    {
+        width: "200px",
+        height: "40px"
+    });
+}
+
+
 
 </script>	
 </head>
@@ -61,23 +84,22 @@ $(document).ready(function()
 			</div>
 			
 			<div class="form-group">
-				<label for="pwd">Password:</label>
+				<label for="pwd">Password/endret:</label>
 				<input type="password" class="form-control" id="pwd">
 			</div>	
 			
 			<button type="submit" class="btn btn-info btn-block btn-shadow">Submit</button>
-		
 		</form>
-
 		<br>
 		<br>
 
 		<button class="btn btn-info">Trykk Meg 1</button>
-		<button class="btn btn-info btn-shadow">Trykk Meg 2</button>
+		<button onclick="KnappenErTrykket();" class="btn btn-google-plus btn-shadow">Trykk Meg 2</button>
 
 	</div>
 	
 </section> 
+
 
 
 <section>
