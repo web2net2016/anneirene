@@ -67,31 +67,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="lib\bootstrap\css\bootstrap-social.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
     <Content Include="lib\bootstrap\css\bootstrap.min.css" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
     <Content Include="lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="lib\css\default.css" />
     <Content Include="lib\css\lg.css" />
     <Content Include="lib\css\md.css" />
     <Content Include="lib\css\sm.css" />
+    <Content Include="lib\css\xl.css" />
     <Content Include="lib\css\xs.css" />
+    <Content Include="lib\css\_vti_cnf\default.css" />
+    <Content Include="lib\css\_vti_cnf\lg.css" />
+    <Content Include="lib\css\_vti_cnf\md.css" />
+    <Content Include="lib\css\_vti_cnf\sm.css" />
+    <Content Include="lib\css\_vti_cnf\xs.css" />
     <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\css\_vti_cnf\font-awesome.min.css" />
     <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="lib\img\1.jpg" />
-    <Content Include="lib\img\favicon.ico" />
-    <Content Include="lib\js\jquery-1.11.2.min.js" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\fontawesome-webfont.svg" />
+    <Content Include="lib\img\_vti_cnf\1.jpg" />
+    <Content Include="lib\img\_vti_cnf\favicon.ico" />
+    <Content Include="lib\js\jquery-3.1.1.min.js" />
+    <Content Include="lib\js\jquery-easing-min.js" />
     <Content Include="lib\js\web2net-functionlib.js" />
     <Content Include="packages.config" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\fontawesome-webfont.woff2" />
+    <Content Include="lib\font-awesome\fonts\_vti_cnf\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -100,14 +112,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="template\1.jpg" />
+    <Content Include="template\cd-panels.css" />
+    <Content Include="template\cd-panels.js" />
+    <Content Include="template\favicon.ico" />
+    <Content Include="template\responsiv_web2net.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modules\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

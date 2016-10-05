@@ -1,4 +1,17 @@
 
+$(document).ready(function()
+{
+    $("a.nav-link").bind("click", function(event)
+    {
+        var $anchor = $(this);
+        $("html, body").stop().animate(
+        {
+            scrollTop: $($anchor.attr("href")).offset().top
+        }, 1500, "easeInOutExpo");
+        event.preventDefault();
+    });
+});
+
 function adjustStyle()
 {
     setCSSInlineStyle();
@@ -12,38 +25,47 @@ function adjustStyle()
     var _WindowWidth = parseInt($(window).width());
     if (_WindowWidth >= 1200)
     {
-        $("#size-stylesheet").attr("href", "lib/css/lg.css");
-        $("#div-window-size").css({ "background-color": "#FF0000" }).text("lg.css");
+        $("#size-stylesheet").attr("href", "lib/css/xl.css");
+        $("#div-window-size").css({ "background-color": "#428bca" }).text("xl.css - >= 1200");
     }
     else if (_WindowWidth >= 992 && _WindowWidth < 1200)
     {
-        $("#size-stylesheet").attr("href", "lib/css/md.css");
-        $("#div-window-size").css({ "background-color": "#428bca" }).text("md.css");
+        $("#size-stylesheet").attr("href", "lib/css/lg.css");
+        $("#div-window-size").css({ "background-color": "#5cb85c" }).text("lg.css - >= 992");
     }
     else if (_WindowWidth >= 768 && _WindowWidth < 991)
     {
+        $("#size-stylesheet").attr("href", "lib/css/md.css");
+        $("#div-window-size").css({ "background-color": "#5bc0de" }).text("md.css - >= 768");
+    }
+    else if (_WindowWidth >= 544 && _WindowWidth < 767)
+    {
         $("#size-stylesheet").attr("href", "lib/css/sm.css");
-        $("#div-window-size").css({ "background-color": "#f0ad4e" }).text("sm.css");
+        $("#div-window-size").css({ "background-color": "#f0ad4e" }).text("sm.css - >= 544");
     }
     else
     {
         $("#size-stylesheet").attr("href", "lib/css/xs.css");
-        $("#div-window-size").css({ "background-color": "#5cb85c" }).text("xs.css");
+        $("#div-window-size").css({ "background-color": "#d9534f" }).text("xs.css - < 543");
     }
 }
 
-function setCSSInlineStyle()
+function setCSSInlineStyle(SelectedArea)
 {
     var _WindowWidth = parseInt($(window).width());
     if (_WindowWidth >= 1200)
     {
-        _WindowWidth = "lg";
+        _WindowWidth = "xl";
     }
     else if (_WindowWidth >= 992 && _WindowWidth < 1200)
     {
-        _WindowWidth = "md";
+        _WindowWidth = "lg";
     }
     else if (_WindowWidth >= 768 && _WindowWidth < 991)
+    {
+        _WindowWidth = "md";
+    }
+    else if (_WindowWidth >= 544 && _WindowWidth < 767)
     {
         _WindowWidth = "sm";
     }
@@ -55,14 +77,38 @@ function setCSSInlineStyle()
     {
         var ClassName = "";
         var ClassItem = "";
+        var ObjExistsStyle = {};
         var ObjSetStyle = {};
-        $("[class*='web2net-']").each(function()
+        if (SelectedArea != "" && SelectedArea != undefined && SelectedArea != null)
+        {
+            SelectedArea = $(SelectedArea);
+        }
+        else
+        {
+            SelectedArea = "";
+        }
+        $("[class*='web2net-']", SelectedArea).each(function()
         {
             var _Self = $(this);
+            ObjExistsStyle = {};
+            ClassName = "";
+            ClassItem = "";
+            if (_Self.attr("style") != "" && _Self.attr("style") != null && _Self.attr("style") != undefined)
+            {
+                ClassName = _Self.attr("style").split(";");
+                $.each(ClassName, function(i, value)
+                {
+                    if (value.indexOf(":") > -1)
+                    {
+                        ClassItem = value.split(":");
+                        ObjExistsStyle[ClassItem[0].replace(/ /g, "")] = ClassItem[1].replace(/ /g, "");
+                    }
+                });
+            }
             ClassName = "";
             ClassItem = "";
             ObjSetStyle = {};
-            ClassName = (this.className.match(/[\w-]*web2net-[\w-#%]*/g));
+            ClassName = (this.className.match(/[\w-]*web2net-[\w-.#%]*/g));
             if (ClassName.length > 0)
             {
                 $.each(ClassName, function(i, SelectedElement)
@@ -110,7 +156,7 @@ function setCSSInlineStyle()
                 });
             }
             _Self.removeAttr("style");
-            _Self.css(ObjSetStyle)
+            _Self.css($.extend(ObjSetStyle, ObjExistsStyle))
         });
     }
 }

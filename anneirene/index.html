@@ -2,140 +2,233 @@
 <html>
 
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Cache-Control" content="no-cache" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-touch-fullscreen" content="yes" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="format-detection" content="email=no" />
-<title></title>
-<link rel="shortcut icon" href="lib/img/favicon.ico">
-<script type="text/javascript" src="lib/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="lib/js/web2net-functionlib.js"></script>
-<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
-<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-social.css">
-<link type="text/css" rel="stylesheet" href="lib/css/default.css">
-<link type="text/css" rel="stylesheet" id="size-stylesheet" href="lib/css/lg.css">
-<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<script type="text/javascript">
-    //X
-var StyleMode = true;
-       
-$(document).ready(function()
-{
-    adjustStyle();
-    $(window).resize(function()
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title></title>
+    <link rel="shortcut icon" href="lib/img/favicon.ico">
+    <script type="text/javascript" src="lib/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="lib/js/web2net-functionlib.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-easing-min.js"></script>
+    <link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="lib/css/default.css" />
+    <link type="text/css" rel="stylesheet" id="size-stylesheet" href="lib/css/xl.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    <script type="text/javascript" src="template/cd-panels.js"></script>
+    <link type="text/css" rel="stylesheet" href="template/cd-panels.css" />
+    <script type="text/javascript">
+
+    var StyleMode = true;
+
+    $(document).ready(function()
     {
         adjustStyle();
-    });
-
-
-
-        $("#pwd").animate(
+        $(window).resize(function()
         {
-            width: "500px",
-            height: "100px"
+            adjustStyle();
         });
 
-
-});
-
-
-function KnappenErTrykket()
-{
-
-    $("#pwd").animate(
-    {
-        width: "200px",
-        height: "40px"
+        $("section:even").css({ "background-color": "#FFFFFF" });
+        $("section:odd").css({ "background-color": "#EEEEEE" });
     });
-}
 
-
-
-</script>	
+    </script>
 </head>
 
 <body>
+    <form id="frmReg">
+
+        <div class="cd-navbar cd-left">
+            <div class="cd-lines cd-btn"></div>
+            <div class="cd-panel from-left">
+                <div class="cd-panel-container">
+                    <div class="cd-panel-content">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section1">Hjem</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section2">Om oss</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section3">Referanser</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section4">Ansatte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section5">Kontakt oss</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar web2net-xs-display-block web2net-xs-height-41px web2net-xs-backgroundColor-#666666 web2net-all-display-none"></nav>
+
+        <section id="section1">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-sm-12">
 
 
-<section class="web2net-all-paddingTop-30px">
+                    </div>
+                </div>
 
-	<div class="container web2net-all-width-400px web2net-xs-width-100%">
+            </div>
+        </section>
 
-		<div class="panel panel-info">
-			
-			<div class="panel-heading">Panel Heading</div>
-			
-			<div class="panel-body">Panel Content</div>
-			
-		</div>		
+        <section id="section2">
+            <div class="container-fluid">
 
-		<form role="form">
-		
-			<div class="form-group">
-				<label for="email">Email address:</label>
-				<input type="email" class="form-control" id="email">
-			</div>
-			
-			<div class="form-group">
-				<label for="pwd">Password/endret:</label>
-				<input type="password" class="form-control" id="pwd">
-			</div>	
-			
-			<button type="submit" class="btn btn-info btn-block btn-shadow">Submit</button>
-		</form>
-		<br>
-		<br>
+                <div class="row web2net-all-marginBottom-40px">
+                    <div class="col-sm-12 text-sm-center">
+                        <h1>Om oss</h1>
+                    </div>
+                </div>
 
-		<button class="btn btn-info">Trykk Meg 1</button>
-		<button onclick="KnappenErTrykket();" class="btn btn-google-plus btn-shadow">Trykk Meg 2</button>
-
-	</div>
-	
-</section> 
+                <div class="row">
+                    <div class="col-sm-12">
 
 
+                    </div>
+                </div>
 
-<section>
+            </div>
+        </section>
 
-	<div class="container web2net-all-height-400px">
-	
-		<p class="well well-lg web2net-all-fontSize-32px">For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-		
-	</div>
+        <section id="section3">
+            <div class="container-fluid">
 
-</section>
+                <div class="row web2net-all-marginBottom-80px">
+                    <div class="col-sm-12 text-sm-center">
+                        <h1>Referanser</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-unstyled pull-right web2net-xs-fontSize-16px web2net-all-fontSize-20px">
+                            <li>
+                                Promidt har spesialkompetanse innen prosjektledelse og taksering
+                            </li>
+                            <li>
+                                Promidt har sentral godkjenning for SØK, overordnet ansvar PRO/UTF/Kontroll
+                            </li>
+                            <li>
+                                Promidt har gode samarbeidspartnere til å løse kompliserte oppdrag i fellesskap
+                            </li>
+                            <li>
+                                Promidt har lang erfaring og kompetanse for alle sine tjenester
+                            </li>
+                            <li>
+                                Promidt er etablert på Levanger med Midt-Norge som markedsområde
+                            </li>
+                            <li>
+                                Promidt er godkjent medlem av Rådgivende Ingeniørers Forening (RIF)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="section4">
+            <div class="container-fluid">
+
+                <div class="row web2net-all-marginBottom-40px">
+                    <div class="col-sm-12 text-sm-center">
+                        <h1>Ansatte</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-11 offset-md-1">
+
+                        <div class="card-deck-wrapper web2net-all-margin-0px">
+                            <div class="card-deck">
+
+                                <div class="card">
+                                    <img class="card-img-top" src="template/responsiv_web2net.jpg" />
+                                    <div class="card-block">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img class="card-img-top" src="template/responsiv_web2net.jpg" />
+                                    <div class="card-block">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img class="card-img-top" src="template/responsiv_web2net.jpg" />
+                                    <div class="card-block">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+   
+            </div>
+        </section>
+
+        <section id="section5">
+            <div class="container-fluid">
+
+                <div class="row web2net-all-marginBottom-40px">
+                    <div class="col-sm-12 text-sm-center">
+                        <h1>Kontakt oss</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
 
 
-<section class="web2net-all-backgroundColor-#DDDDDD">
+                    </div>
+                </div>
 
-	<div class="container web2net-all-height-400px web2net-all-border-1px-solid-#FF0000">
-	
-		<p class="well web2net-all-fontSize-32px">For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
-		
-	</div>
+            </div>
+        </section>
 
-</section>
- 
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 text-sm-center">
+                        <span>Copyright &copy; promidt - 2016</span>
+                        <a href="http://web2net.no/" target="_blank">Powered by Web2net</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
- 
-
-<section class="bootstrap-success">
-
-	<div class="container web2net-all-height-400px">
-	
-	
-	</div>
-
-</section>
-
- 
-  
+    </form>
 </body>
 </html>
